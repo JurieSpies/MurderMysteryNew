@@ -1,0 +1,227 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Murder Mystery Game Scenario",
+  "description": "Schema for murder mystery game scenarios",
+  "type": "object",
+  "required": [
+    "id",
+    "title",
+    "description",
+    "characters",
+    "clues",
+    "solution",
+    "minPlayers",
+    "maxPlayers"
+  ],
+  "properties": {
+    "id": {
+      "type": "string",
+      "description": "Unique identifier for the scenario"
+    },
+    "title": {
+      "type": "string",
+      "description": "Display title of the scenario"
+    },
+    "description": {
+      "type": "string",
+      "description": "Brief description of the scenario setup"
+    },
+    "characters": {
+      "type": "array",
+      "description": "List of characters in the scenario",
+      "minItems": 4,
+      "maxItems": 8,
+      "items": {
+        "$ref": "#/definitions/Character"
+      }
+    },
+    "clues": {
+      "type": "array",
+      "description": "List of clues to be revealed during the game",
+      "minItems": 3,
+      "items": {
+        "$ref": "#/definitions/Clue"
+      }
+    },
+    "solution": {
+      "$ref": "#/definitions/Solution"
+    },
+    "minPlayers": {
+      "type": "integer",
+      "minimum": 3,
+      "maximum": 8,
+      "description": "Minimum number of players required"
+    },
+    "maxPlayers": {
+      "type": "integer",
+      "minimum": 3,
+      "maximum": 8,
+      "description": "Maximum number of players allowed"
+    },
+    "estimatedDuration": {
+      "type": "integer",
+      "description": "Estimated game duration in minutes",
+      "minimum": 30,
+      "maximum": 180
+    },
+    "difficulty": {
+      "type": "string",
+      "enum": ["easy", "medium", "hard"],
+      "description": "Difficulty level of the scenario"
+    },
+    "tags": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "Tags for categorizing scenarios"
+    }
+  },
+  "definitions": {
+    "Character": {
+      "type": "object",
+      "required": [
+        "id",
+        "name",
+        "description",
+        "publicInfo",
+        "privateInfo",
+        "secrets",
+        "relationships"
+      ],
+      "properties": {
+        "id": {
+          "type": "string",
+          "description": "Unique identifier for the character"
+        },
+        "name": {
+          "type": "string",
+          "description": "Character's name"
+        },
+        "description": {
+          "type": "string",
+          "description": "Brief character description visible to all players"
+        },
+        "publicInfo": {
+          "type": "string",
+          "description": "Public information about the character known to all"
+        },
+        "privateInfo": {
+          "type": "string",
+          "description": "Private background information only for the player"
+        },
+        "secrets": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "Character's secrets that may be revealed"
+        },
+        "relationships": {
+          "type": "object",
+          "description": "Relationships with other characters",
+          "additionalProperties": {
+            "type": "string"
+          }
+        },
+        "avatar": {
+          "type": "string",
+          "description": "URL or path to character avatar image"
+        },
+        "motives": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "Potential motives for the character"
+        }
+      }
+    },
+    "Clue": {
+      "type": "object",
+      "required": ["id", "title", "content", "type", "category", "isPublic"],
+      "properties": {
+        "id": {
+          "type": "string",
+          "description": "Unique identifier for the clue"
+        },
+        "title": {
+          "type": "string",
+          "description": "Title of the clue"
+        },
+        "content": {
+          "type": "string",
+          "description": "The actual clue content"
+        },
+        "type": {
+          "type": "string",
+          "enum": ["text", "image", "document", "audio"],
+          "description": "Type of clue media"
+        },
+        "category": {
+          "type": "string",
+          "description": "Category for organizing clues"
+        },
+        "isPublic": {
+          "type": "boolean",
+          "description": "Whether the clue is visible to all players"
+        },
+        "revealOrder": {
+          "type": "integer",
+          "description": "Order in which clue should be revealed"
+        },
+        "imageUrl": {
+          "type": "string",
+          "description": "URL to associated image"
+        },
+        "audioUrl": {
+          "type": "string",
+          "description": "URL to associated audio"
+        },
+        "relatedCharacters": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "Character IDs related to this clue"
+        }
+      }
+    },
+    "Solution": {
+      "type": "object",
+      "required": ["murderer", "motive", "method", "explanation"],
+      "properties": {
+        "murderer": {
+          "type": "string",
+          "description": "ID or name of the murderer character"
+        },
+        "motive": {
+          "type": "string",
+          "description": "The murderer's motive"
+        },
+        "method": {
+          "type": "string",
+          "description": "How the murder was committed"
+        },
+        "explanation": {
+          "type": "string",
+          "description": "Detailed explanation of how the crime unfolded"
+        },
+        "keyClues": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "IDs of clues that are crucial to solving the case"
+        },
+        "redHerrings": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "IDs of clues that are misleading"
+        }
+      }
+    }
+  }
+}

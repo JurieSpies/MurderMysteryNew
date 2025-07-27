@@ -1,0 +1,269 @@
+{
+  "id": "scenario_missing_heiress",
+  "title": "The Case of the Missing Heiress",
+  "description": "Lady Victoria Blackwood, a wealthy heiress, has been found dead in her locked study. The cause appears to be poisoning, but who among her household had motive and opportunity?",
+  "estimatedDuration": 90,
+  "difficulty": "medium",
+  "tags": ["classic", "poison", "inheritance", "victorian"],
+  "minPlayers": 4,
+  "maxPlayers": 6,
+  "characters": [
+    {
+      "id": "char_butler",
+      "name": "James the Butler",
+      "description": "The loyal family butler who has served the Blackwood family for 30 years.",
+      "publicInfo": "Has been with the family for decades and knows all their secrets. Recently seemed worried about something.",
+      "privateInfo": "You discovered Lady Blackwood was planning to fire you and replace you with a younger butler. You have gambling debts that Lady Blackwood recently discovered. You've been stealing small amounts from the household budget to pay your debts.",
+      "secrets": [
+        "You have been stealing small amounts of money from the household budget to pay gambling debts.",
+        "You overheard Lady Blackwood on the phone with an employment agency last week discussing your replacement.",
+        "You owe £15,000 to dangerous people who have threatened violence if not paid soon."
+      ],
+      "relationships": {
+        "char_nephew": "You disapprove of his wild lifestyle and know about his debts",
+        "char_doctor": "Old friends - you recommended her to the family years ago",
+        "char_secretary": "You work closely together managing the household",
+        "char_gardener": "You've noticed him acting strangely lately",
+        "char_maid": "You've been training her and she looks up to you"
+      },
+      "motives": [
+        "Fear of losing your job and home after 30 years of service",
+        "Desperate need for money to pay gambling debts",
+        "Anger at Lady Blackwood for planning to replace you"
+      ],
+      "avatar": "/images/characters/butler.jpg"
+    },
+    {
+      "id": "char_nephew",
+      "name": "Richard Blackwood",
+      "description": "Lady Blackwood's nephew and potential heir to the fortune.",
+      "publicInfo": "A charming but irresponsible young man with expensive tastes. Known to have financial troubles.",
+      "privateInfo": "You are deeply in debt and desperately need your inheritance. Lady Blackwood recently threatened to change her will after discovering you forged her signature on a check. You owe £50,000 to dangerous people.",
+      "secrets": [
+        "You owe £50,000 to dangerous people who have threatened violence.",
+        "You forged Lady Blackwood's signature on a check for £5,000 last month.",
+        "Lady Blackwood threatened to disinherit you completely after discovering the forgery."
+      ],
+      "relationships": {
+        "char_butler": "He knows about your debts and disapproves of your lifestyle",
+        "char_secretary": "She handles your aunt's finances and knows too much about your situation",
+        "char_doctor": "She's been treating your aunt and you suspect she influences her decisions",
+        "char_gardener": "You barely notice the help",
+        "char_maid": "You've tried to charm her but she seems unimpressed"
+      },
+      "motives": [
+        "Desperate need for inheritance money to pay debts",
+        "Fear of being completely disinherited",
+        "Anger at Lady Blackwood for threatening to cut you off"
+      ],
+      "avatar": "/images/characters/nephew.jpg"
+    },
+    {
+      "id": "char_doctor",
+      "name": "Dr. Margaret Thornfield",
+      "description": "The family physician and Lady Blackwood's close friend.",
+      "publicInfo": "A respected doctor who has been treating the family for years. Very close to Lady Blackwood.",
+      "privateInfo": "You have been slowly poisoning Lady Blackwood with small doses of arsenic in her medication, planning to make it look like natural causes. You had an affair with her late husband and she was starting to suspect the truth about his death.",
+      "secrets": [
+        "You have been having an affair with Lady Blackwood's late husband before he died.",
+        "You falsified medical records to cover up the real cause of Lord Blackwood's death - you poisoned him too.",
+        "You've been gradually increasing arsenic doses in Lady Blackwood's medication over the past month."
+      ],
+      "relationships": {
+        "char_butler": "Old friends who trust each other - he recommended you to the family",
+        "char_nephew": "You find him irresponsible but he's not a threat to you",
+        "char_secretary": "She sometimes questions your medical bills",
+        "char_gardener": "You buy herbs from him for 'medicinal purposes' - actually to mask poison",
+        "char_maid": "She's observant and you worry she might have seen something"
+      },
+      "motives": [
+        "Fear of Lady Blackwood discovering your affair with her late husband",
+        "Need to cover up the murder of Lord Blackwood",
+        "Desire to inherit through a forged will you've prepared"
+      ],
+      "avatar": "/images/characters/doctor.jpg"
+    },
+    {
+      "id": "char_secretary",
+      "name": "Miss Eleanor Hartwell",
+      "description": "Lady Blackwood's personal secretary and financial advisor.",
+      "publicInfo": "Efficient and professional, she manages all of Lady Blackwood's affairs. Has been with the family for 8 years.",
+      "privateInfo": "You have been embezzling money from Lady Blackwood's accounts for years. She was getting suspicious and hired an auditor to review the books. You've stolen over £100,000 and created fake invoices to hide the theft.",
+      "secrets": [
+        "You have stolen over £100,000 over the past five years through fake invoices.",
+        "You created shell companies to hide the embezzlement.",
+        "Lady Blackwood hired an auditor who will discover everything next week."
+      ],
+      "relationships": {
+        "char_butler": "You work closely together and he trusts you completely",
+        "char_nephew": "You know about his financial troubles and forged check",
+        "char_doctor": "You sometimes question her expensive medical bills",
+        "char_gardener": "You barely interact with him",
+        "char_maid": "She sometimes helps you with filing and paperwork"
+      },
+      "motives": [
+        "Fear of being discovered and going to prison for embezzlement",
+        "Need to cover up years of financial theft",
+        "Desperation as the audit will expose everything"
+      ],
+      "avatar": "/images/characters/secretary.jpg"
+    },
+    {
+      "id": "char_gardener",
+      "name": "Thomas Green",
+      "description": "The estate gardener who tends to the extensive grounds.",
+      "publicInfo": "A quiet man who knows every inch of the estate and its hidden places. Has worked here for 3 years.",
+      "privateInfo": "You are actually Lady Blackwood's illegitimate son, given up for adoption 35 years ago. You recently discovered the truth and want recognition and your rightful inheritance. You've been watching the family for months.",
+      "secrets": [
+        "You found documents proving Lady Blackwood is your biological mother.",
+        "You have been watching the family for months, planning your approach.",
+        "You know about secret passages in the house from your research."
+      ],
+      "relationships": {
+        "char_butler": "He's been kind to you but doesn't know your true identity",
+        "char_nephew": "Your half-brother who doesn't know you exist",
+        "char_doctor": "She buys rare plants from you and you've overheard her phone calls",
+        "char_secretary": "You rarely interact but you've seen her working late",
+        "char_maid": "You have romantic feelings for her and she's kind to you"
+      },
+      "motives": [
+        "Desire for recognition as Lady Blackwood's son",
+        "Anger at being abandoned and given up for adoption",
+        "Need for your rightful share of the inheritance"
+      ],
+      "avatar": "/images/characters/gardener.jpg"
+    },
+    {
+      "id": "char_maid",
+      "name": "Sarah Mills",
+      "description": "The young housemaid who sees and hears everything in the house.",
+      "publicInfo": "Hardworking and observant, she keeps the house running smoothly. Has been here for 2 years.",
+      "privateInfo": "You witnessed the murder but are too scared to speak up because you saw who did it and they threatened you. You found a threatening note in your room after the murder warning you to stay quiet.",
+      "secrets": [
+        "You saw someone entering Lady Blackwood's room the night she died.",
+        "You found a threatening note left in your room after the murder.",
+        "You know where the murder weapon is hidden but are too scared to tell."
+      ],
+      "relationships": {
+        "char_butler": "He's been like a father figure, training and protecting you",
+        "char_nephew": "He's tried to charm you but you see through his act",
+        "char_doctor": "You've noticed her acting strangely around Lady Blackwood",
+        "char_secretary": "She sometimes asks you to help with filing",
+        "char_gardener": "You suspect he has feelings for you and you find him mysterious"
+      },
+      "motives": [
+        "Fear for your safety after witnessing the murder",
+        "Loyalty to Lady Blackwood who treated you kindly",
+        "Desire to see justice done but terror of the consequences"
+      ],
+      "avatar": "/images/characters/maid.jpg"
+    }
+  ],
+
+  "clues": [
+    {
+      "id": "clue_poison_bottle",
+      "title": "Empty Poison Bottle",
+      "content": "A small glass bottle labeled 'Arsenic - For Pest Control' found hidden in the garden shed. The bottle is empty but has recent fingerprints on it. There are traces of white powder residue inside.",
+      "type": "text",
+      "category": "Physical Evidence",
+      "isPublic": true,
+      "revealOrder": 1,
+      "relatedCharacters": ["char_doctor", "char_gardener"],
+      "imageUrl": "/images/clues/poison_bottle.jpg"
+    },
+    {
+      "id": "clue_threatening_letter",
+      "title": "Threatening Letter",
+      "content": "A letter found in Lady Blackwood's desk drawer: 'Pay what you owe or face the consequences. You have one week. We know where you live.' The handwriting appears to be disguised, written in block letters.",
+      "type": "text",
+      "category": "Documents",
+      "isPublic": true,
+      "revealOrder": 2,
+      "relatedCharacters": ["char_nephew", "char_butler"],
+      "imageUrl": "/images/clues/threatening_letter.jpg"
+    },
+    {
+      "id": "clue_financial_records",
+      "title": "Financial Discrepancies",
+      "content": "Bank statements showing irregular withdrawals and transfers over the past year. Several payments to unknown companies and cash withdrawals of large amounts. Total discrepancies amount to over £100,000.",
+      "type": "document",
+      "category": "Financial",
+      "isPublic": true,
+      "revealOrder": 3,
+      "relatedCharacters": ["char_secretary", "char_nephew"],
+      "imageUrl": "/images/clues/bank_statements.jpg"
+    },
+    {
+      "id": "clue_medical_records",
+      "title": "Medical Test Results",
+      "content": "Lady Blackwood's recent medical records show elevated levels of arsenic in her blood from tests taken last month. The levels were concerning but not immediately fatal. A note indicates 'patient complaining of stomach pains and fatigue.'",
+      "type": "document",
+      "category": "Medical",
+      "isPublic": true,
+      "revealOrder": 4,
+      "relatedCharacters": ["char_doctor"],
+      "imageUrl": "/images/clues/medical_records.jpg"
+    },
+    {
+      "id": "clue_witness_testimony",
+      "title": "Neighbor's Account",
+      "content": "Mrs. Henderson from the neighboring estate reported seeing someone in dark clothing leaving through the garden gate around midnight on the night of the murder. The figure appeared to be carrying something small.",
+      "type": "text",
+      "category": "Witness",
+      "isPublic": true,
+      "revealOrder": 5,
+      "relatedCharacters": ["char_gardener", "char_maid"],
+      "imageUrl": "/images/clues/witness_statement.jpg"
+    },
+    {
+      "id": "clue_forged_signature",
+      "title": "Suspicious Check",
+      "content": "A check made out for £5,000 with Lady Blackwood's signature, dated last month. However, handwriting analysis reveals the signature is a forgery. The check was cashed at a local bank.",
+      "type": "document",
+      "category": "Documents",
+      "isPublic": true,
+      "revealOrder": 6,
+      "relatedCharacters": ["char_nephew"],
+      "imageUrl": "/images/clues/forged_check.jpg"
+    },
+    {
+      "id": "clue_hidden_key",
+      "title": "Hidden Safe Key",
+      "content": "A small key found hidden behind a loose brick in the garden wall. The key opens a safe in Lady Blackwood's study containing important documents including her will and adoption papers.",
+      "type": "text",
+      "category": "Physical Evidence",
+      "isPublic": true,
+      "revealOrder": 7,
+      "relatedCharacters": ["char_gardener"],
+      "imageUrl": "/images/clues/hidden_key.jpg"
+    },
+    {
+      "id": "clue_medication_tampering",
+      "title": "Tampered Medication",
+      "content": "Lady Blackwood's heart medication bottle shows signs of tampering. The capsules have been opened and resealed. Chemical analysis reveals traces of arsenic mixed with the original medication.",
+      "type": "text",
+      "category": "Physical Evidence",
+      "isPublic": true,
+      "revealOrder": 8,
+      "relatedCharacters": ["char_doctor"],
+      "imageUrl": "/images/clues/medication.jpg"
+    }
+  ],
+  "solution": {
+    "murderer": "Dr. Margaret Thornfield",
+    "motive": "To cover up her affair with Lord Blackwood and prevent Lady Blackwood from discovering she had been slowly poisoning her to steal her fortune.",
+    "method": "Arsenic poisoning administered through Lady Blackwood's heart medication over several weeks, with a final lethal dose given the night of her death.",
+    "explanation": "Dr. Margaret Thornfield had been having an affair with Lord Blackwood before his death, which she also caused through poisoning. When Lady Blackwood began to suspect the truth about her husband's death and threatened to change doctors, Dr. Thornfield began slowly poisoning Lady Blackwood with arsenic mixed into her heart medication. The plan was to make it appear as natural causes, but when Lady Blackwood's suspicions grew and she scheduled an appointment with a new doctor, Dr. Thornfield administered a final lethal dose. The doctor had access to the medication, knowledge of poisons, and the medical expertise to carry out the murder while initially avoiding suspicion. The empty arsenic bottle in the garden shed was planted to frame the gardener, but her fingerprints were still on it.",
+    "keyClues": [
+      "clue_medical_records",
+      "clue_medication_tampering",
+      "clue_poison_bottle"
+    ],
+    "redHerrings": [
+      "clue_threatening_letter",
+      "clue_forged_signature",
+      "clue_financial_records"
+    ]
+  }
+}
