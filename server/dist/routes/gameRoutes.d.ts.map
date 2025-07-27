@@ -1,0 +1,1 @@
+{"version":3,"file":"gameRoutes.d.ts","sourceRoot":"","sources":["../../src/routes/gameRoutes.ts"],"names":[],"mappings":"AACA,OAAO,EAAE,WAAW,EAAE,MAAM,yBAAyB,CAAC;AACtD,OAAO,EAAE,eAAe,EAAE,MAAM,6BAA6B,CAAC;AAE9D,QAAA,MAAM,MAAM,4CAAW,CAAC;AAMxB,eAAO,MAAM,cAAc,GAAI,IAAI,WAAW,SAE7C,CAAC;AAEF,eAAO,MAAM,kBAAkB,GAAI,IAAI,eAAe,SAErD,CAAC;AA0JF,eAAe,MAAM,CAAC"}
